@@ -1,0 +1,349 @@
+/* ===== Colours ===== */
+:root {
+  --forest: #14532d;
+  --leaf: #2f7d32;
+  --mint: #dcfce7;
+  --earth: #795548;
+  --cream: #fff8e7;
+  --gold: #d4a017;
+  --text: #1f2937;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Mukta", sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+h1,
+h2,
+h3,
+.brand {
+  font-family: "Fraunces", serif;
+  color: var(--forest);
+}
+h2 {
+  margin-bottom: 1rem;
+}
+.bg-light-green {
+  background: var(--mint);
+}
+
+/* Temple-border motif: gold and green triangles */
+.motif {
+  height: 12px;
+  background:
+    conic-gradient(from 135deg at 50% 100%, var(--gold) 0 90deg, transparent 0)
+      0/24px 12px,
+    var(--forest);
+}
+
+/* Navbar */
+.navbar {
+  background: var(--forest);
+}
+.navbar .brand {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.navbar .nav-link {
+  color: #d7efdc;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--gold);
+}
+.btn-gold {
+  background: var(--gold);
+  color: #1f2937;
+  font-weight: 600;
+  border: 0;
+}
+.btn-gold:hover {
+  background: #b98a10;
+  color: #fff;
+}
+.btn-forest {
+  background: var(--forest);
+  color: #fff;
+}
+.btn-forest:hover {
+  background: var(--leaf);
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  min-height: 82vh;
+  background:
+    linear-gradient(90deg, rgba(10, 45, 25, 0.85), rgba(10, 45, 25, 0.25)),
+    url(https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Tadiandamol_Valley%2C_Western_Ghats.jpg/1280px-Tadiandamol_Valley%2C_Western_Ghats.jpg)
+      center/cover,
+    var(--forest);
+}
+.hero h1 {
+  color: #fff;
+  font-size: clamp(2.6rem, 7vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+.hero .tag {
+  font-family: "Fraunces", serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+}
+.hero-in {
+  animation: rise 0.9s ease both;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+/* Stats strip */
+.stats {
+  background: #fff;
+  border-radius: 14px;
+  margin-top: -34px;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  padding: 1rem 0;
+}
+.stats div {
+  border-right: 1px solid #e5e7eb;
+}
+.stats div:last-child {
+  border: 0;
+}
+.stats b {
+  display: block;
+  font-family: "Fraunces", serif;
+  font-size: 1.8rem;
+  color: var(--leaf);
+}
+.disc li {
+  padding: 0.25rem 0;
+  border-bottom: 1px dashed #d6c9a5;
+}
+
+/* Cards */
+.card {
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.ph {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--leaf), var(--forest));
+}
+.ph img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.card:hover .ph img {
+  transform: scale(1.08);
+}
+.rate {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--gold);
+  color: #1f2937;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+.badge-cat {
+  background: var(--mint);
+  color: var(--forest);
+  margin-right: 4px;
+}
+.stars {
+  color: var(--gold);
+}
+.meta {
+  font-size: 0.9rem;
+  color: var(--earth);
+}
+
+/* Filters */
+.chip {
+  border: 1px solid var(--leaf);
+  background: #fff;
+  color: var(--forest);
+  border-radius: 20px;
+  padding: 4px 14px;
+}
+.chip.on {
+  background: var(--forest);
+  color: #fff;
+}
+
+/* Page header */
+.page-head {
+  background: var(--mint);
+  padding: 3rem 0 2rem;
+}
+.page-head h1 {
+  margin: 0;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  overflow-x: auto;
+  gap: 0;
+  padding-bottom: 8px;
+}
+.timeline div {
+  flex: 1 0 150px;
+  text-align: center;
+  position: relative;
+  padding-top: 26px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.timeline div::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gold);
+}
+.timeline div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: calc(50% - 10px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--forest);
+  border: 4px solid var(--gold);
+}
+.timeline small {
+  display: block;
+  font-weight: 400;
+  color: var(--earth);
+}
+
+/* Gallery masonry */
+.masonry {
+  column-count: 3;
+  column-gap: 14px;
+}
+.masonry figure {
+  break-inside: avoid;
+  margin: 0 0 14px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: var(--leaf);
+  min-height: 140px;
+}
+.masonry img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s;
+}
+.masonry figure:hover img {
+  transform: scale(1.06);
+}
+.masonry figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: #fff;
+  padding: 20px 10px 8px;
+  opacity: 0;
+  transition: 0.3s;
+}
+.masonry figure:hover figcaption {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+/* Seasons and tips */
+.season {
+  border-radius: 16px;
+  padding: 1.5rem;
+  color: #fff;
+  height: 100%;
+}
+.season h3 {
+  color: #fff;
+}
+.s1 {
+  background: var(--forest);
+}
+.s2 {
+  background: var(--gold);
+  color: #1f2937;
+}
+.s2 h3 {
+  color: #1f2937;
+}
+.s3 {
+  background: var(--earth);
+}
+.tips > div > div {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  height: 100%;
+  border-left: 5px solid var(--gold);
+}
+
+/* Footer */
+footer {
+  background: var(--forest);
+  color: #cfe8d4;
+  padding: 2.5rem 0 1rem;
+  margin-top: 3rem;
+}
+footer h3 {
+  color: var(--gold);
+  font-size: 1.1rem;
+}
+footer a {
+  color: #cfe8d4;
+  text-decoration: none;
+  display: block;
+  padding: 2px 0;
+}
+footer a:hover {
+  color: var(--gold);
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

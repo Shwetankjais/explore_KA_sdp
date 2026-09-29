@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Guide | Explore Karnataka</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;800&family=Mukta:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body data-page="travel">
+    <div id="nav"></div>
+    <header class="page-head">
+      <div class="container">
+        <h1>Travel Guide</h1>
+        <p>Getting here, getting around, and when to go.</p>
+      </div>
+    </header>
+    <div class="motif"></div>
+    <main class="container py-4">
+      <h2>How to Reach Karnataka</h2>
+      <ul class="nav nav-pills mb-3" role="tablist">
+        <li class="nav-item">
+          <button
+            class="nav-link active"
+            data-bs-toggle="pill"
+            data-bs-target="#t1"
+          >
+            ✈️ Air
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t2">
+            🚆 Train
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t3">
+            🚌 Bus
+          </button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="pill" data-bs-target="#t4">
+            🚗 Road
+          </button>
+        </li>
+      </ul>
+      <div class="tab-content mb-5">
+        <div class="tab-pane fade show active" id="t1">
+          Major airports: Bengaluru (BLR), Mangaluru, Hubballi, Mysuru and
+          Belagavi.
+        </div>
+        <div class="tab-pane fade" id="t2">
+          Bengaluru, Mysuru, Hubballi and Mangaluru are the main railway hubs
+          with links across India.
+        </div>
+        <div class="tab-pane fade" id="t3">
+          KSRTC and private operators connect Bengaluru to nearly every town in
+          the state.
+        </div>
+        <div class="tab-pane fade" id="t4">
+          National highways link Karnataka to Tamil Nadu, Kerala, Goa,
+          Maharashtra and Andhra Pradesh.
+        </div>
+      </div>
+      <h2>Getting Around</h2>
+      <div class="accordion mb-5" id="acc">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button"
+              data-bs-toggle="collapse"
+              data-bs-target="#a1"
+            >
+              Metro
+            </button>
+          </h3>
+          <div
+            id="a1"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#acc"
+          >
+            <div class="accordion-body">
+              Namma Metro covers Bengaluru's main corridors. Best for city
+              travel.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#a2"
+            >
+              Local buses
+            </button>
+          </h3>
+          <div
+            id="a2"
+            class="accordion-collapse collapse"
+            data-bs-parent="#acc"
+          >
+            <div class="accordion-body">
+              BMTC in Bengaluru and KSRTC between towns. Cheap and frequent.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#a3"
+            >
+              Cab
+            </button>
+          </h3>
+          <div
+            id="a3"
+            class="accordion-collapse collapse"
+            data-bs-parent="#acc"
+          >
+            <div class="accordion-body">
+              App cabs work in cities. For day trips, book a driver by the day.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <button
+              class="accordion-button collapsed"
+              data-bs-toggle="collapse"
+              data-bs-target="#a4"
+            >
+              Rental car and bike
+            </button>
+          </h3>
+          <div
+            id="a4"
+            class="accordion-collapse collapse"
+            data-bs-parent="#acc"
+          >
+            <div class="accordion-body">
+              Self-drive cars and bikes are popular in Coorg, Gokarna and Hampi.
+              Carry your licence.
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Best Time to Visit</h2>
+      <div class="row g-3 mb-5">
+        <div class="col-md-4">
+          <div class="season s1">
+            <h3>Winter</h3>
+            <b>Oct – Feb</b>
+            <p>Best overall: cool, clear, ideal for heritage and beaches.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="season s2">
+            <h3>Summer</h3>
+            <b>Mar – May</b>
+            <p>Hot inland. Head to hill stations and coffee country.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="season s3">
+            <h3>Monsoon</h3>
+            <b>Jun – Sep</b>
+            <p>
+              Waterfalls at full flow and lush Ghats. Roads can be slippery.
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2>Travel Tips</h2>
+      <div class="row g-3 tips" id="tips"></div>
+    </main>
+    <div id="foot"></div>
+    <div id="modals"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
